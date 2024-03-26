@@ -81,9 +81,9 @@ contract FundMe {
         Fundme();
     }
 
-    /*
-    view.pure function Getters
-    */
+    /**
+     * Getters function
+     */
 
     function getAddressToAmountFund(
         address fundingAddress
