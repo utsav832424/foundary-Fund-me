@@ -4,7 +4,7 @@ pragma solidity ^0.8.18;
 import {Test, console} from "forge-std/Test.sol";
 import {FundMe} from "../../src/FundMe.sol";
 import {DeployFundMe} from "../../script/DeployFundMe.s.sol";
-import {FundFundMe, WihdrawFundMe} from "../../script/Integrations.t.sol";
+import {FundFundMe, WihdrawFundMe} from "../../script/Integrations.s.sol";
 
 contract IntergrationTest is Test {
     FundMe fundMe;
@@ -24,6 +24,6 @@ contract IntergrationTest is Test {
         fundFundMe.fundFundMe(address(fundMe));
 
         WihdrawFundMe wihdrawFundMe = new WihdrawFundMe();
-        wihdrawFundMe.wihdrawFundMe((address(fundMe)));
+        wihdrawFundMe.wihdrawFundMe(address(fundMe));
     }
 }
